@@ -45,6 +45,10 @@ namespace StayFit
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 100, 100));
             userService = new UserService();
         }
+        public User GetUser()
+        {
+            return userService.GetUserbyMail(mail);
+        }
         UserService userService;
         private Button currentButton;
         private Form activeForm;
@@ -220,6 +224,20 @@ namespace StayFit
                     this.Show();
                     
                 }
+            }
+        }
+
+        private void pbDeleteUser_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = new DialogResult();
+            dialogResult = MessageBox.Show("Are you sure you want to delete your account?", "Delete Account", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                User user = new User();
+                user = GetUser();
+                userService.DeleteforUser(user.Id);
+                this.Close();
             }
         }
     }

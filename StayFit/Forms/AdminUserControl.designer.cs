@@ -41,17 +41,16 @@ namespace StayFit.Forms
             this.btnUpdateUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.dataUserInfo = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pbPrint = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -86,7 +85,6 @@ namespace StayFit.Forms
             this.lstUsers.Size = new System.Drawing.Size(333, 606);
             this.lstUsers.TabIndex = 1;
             this.lstUsers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstUsers_MouseClick);
-            this.lstUsers.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // panel3
             // 
@@ -204,8 +202,7 @@ namespace StayFit.Forms
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
-            this.Column5});
+            this.Column4});
             this.dataUserInfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataUserInfo.Location = new System.Drawing.Point(0, 55);
             this.dataUserInfo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -213,36 +210,6 @@ namespace StayFit.Forms
             this.dataUserInfo.ReadOnly = true;
             this.dataUserInfo.Size = new System.Drawing.Size(696, 606);
             this.dataUserInfo.TabIndex = 4;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "First Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Last Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Phone Number";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Mail";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Password";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // panel4
             // 
@@ -295,6 +262,30 @@ namespace StayFit.Forms
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "First Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Last Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Phone Number";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mail";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // AdminUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -338,13 +329,12 @@ namespace StayFit.Forms
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button btnShowUserHistory;
         private System.Windows.Forms.Button btnShowActiveUsers;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pbPrint;
+        private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pbPrint;
-        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

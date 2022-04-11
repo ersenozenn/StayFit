@@ -21,20 +21,7 @@ namespace StayFit.Forms
             userService = new UserService();
         }
 
-        private void listBox1_DoubleClick(object sender, EventArgs e)
-        {
-            this.Hide();
-            User user = new User();
-            user = userService.GetById((int)(lstUsers.SelectedValue));
-            using (FormMainMenu formMainMenu = new FormMainMenu(user.Mail))
-            {
-                if (formMainMenu.ShowDialog() != System.Windows.Forms.DialogResult.OK)
-                {
-                    this.Close();
-                }
-            }
-        }
-
+       
         private void GetListBox()
         {
             lstUsers.SelectionMode = SelectionMode.MultiExtended;

@@ -36,6 +36,7 @@ namespace StayFit.Forms
             InitializeComponent();
             userService = new UserService();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
+            
         }
         public SignUp(int _id)
         {
@@ -43,6 +44,7 @@ namespace StayFit.Forms
             userService = new UserService();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
             id = _id;
+            
         }
         public SignUp(string _mail)
         {
@@ -52,6 +54,7 @@ namespace StayFit.Forms
             this.label3.Location = new System.Drawing.Point(42, 204);
             label3.Text = "Old password :";
             email = _mail;
+            
         }
         string email;
         bool drag = false;
@@ -71,54 +74,26 @@ namespace StayFit.Forms
             string mail = txtMail.Text;
             string password = txtPassword.Text;
             string rePassword = txtRePassword.Text;
-            if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && !firstName.Any(char.IsDigit) && !surname.Any(char.IsDigit) && !firstName.Any(char.IsSymbol) && !surname.Any(char.IsSymbol) &&  btnSignUp.Text == "Sign Up" || btnSignUp.Text == "Add" || btnSignUp.Text == "Update")
+            if (rePassword==password && btnSignUp.Text == "Sign Up" || btnSignUp.Text == "Add" || btnSignUp.Text == "Update" )
+            {                
+                    SignInAddorUpdate();              
+
+            }
+            else if (rePassword == password && btnSignUp.Text == "Update Information")
             {
-                if (userService.GetUserbyMail(mail) != null)
+                User user = userService.GetUserbyMail(email);
+                if (user.Password==txtMail.Text)
                 {
-                    MessageBox.Show("This e_mail already registered!");
+                    SignInAddorUpdate();
                 }
                 else
                 {
-                    txtName.Text = txtName.Text[0].ToString().ToUpper() + txtName.Text.Substring(1);
-                    txtSurname.Text = txtSurname.Text[0].ToString().ToUpper() + txtSurname.Text.Substring(1);
-                    SignInAddorUpdate();
+                    MessageBox.Show("Passwords do not match!");
                 }
-
-            }
-            else if (password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && btnSignUp.Text == "Update Information" && !firstName.Any(char.IsDigit) && !surname.Any(char.IsDigit))
-            {
-                txtName.Text = txtName.Text[0].ToString().ToUpper() + txtName.Text.Substring(1);
-                txtSurname.Text = txtSurname.Text[0].ToString().ToUpper() + txtSurname.Text.Substring(1);
-                SignInAddorUpdate();
-            }
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && !mail.Contains("@") || !mail.EndsWith(".com"))
-            {
-                MessageBox.Show("Please enter a valid email address!");
-            }
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
-            {
-                MessageBox.Show("Please do not leave the name and surname fields blank!");
-            }
-            else if (mail.Length < 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
-            {
-                MessageBox.Show("Email address must be longer than 10 characters!");
-            }
-            else if (mail.Length > 10 || password.Any(Char.IsDigit) || password.Any(Char.IsLower) || password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) || password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
-            {
-                MessageBox.Show("Your password must contain uppercase and lowercase letters and numbers and length should be more than 6 characters!");
-            }
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword != password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && !mail.Contains("@") || !mail.EndsWith(".com"))
-            {
-                MessageBox.Show("Passwords do not match!");
-            }
-            else if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && firstName.Any(char.IsDigit) || surname.Any(char.IsDigit) || firstName.Any(char.IsSymbol) || surname.Any(char.IsSymbol))
-            {
-                MessageBox.Show("Firstname or lastname should not contain symbol or digit character");
-            }
-
+            }           
             else
             {
-                MessageBox.Show("Something went wrong. Please check your entries.");
+                MessageBox.Show("Passwords do not match!");
             }
         }
         public void SignInAddorUpdate()
@@ -133,11 +108,17 @@ namespace StayFit.Forms
                 user.Mail = txtMail.Text;
                 user.Password = txtPassword.Text;
 
-                if (userService.AddUser(user))
+                string answer = userService.AddUser(user);
+                if (answer == "Sign up succesfull")
                 {
-                    MessageBox.Show("Sign up succesfull");
+                    MessageBox.Show(answer);
                     this.Close();
                 }
+                else
+                {
+                    MessageBox.Show(answer);
+                }
+
             }
             else if (btnSignUp.Text == "Add")
             {
@@ -149,10 +130,15 @@ namespace StayFit.Forms
                 user.Mail = txtMail.Text;
                 user.Password = txtPassword.Text;
 
-                if (userService.AddUser(user))
+                string answer = userService.AddUser(user);
+                if (answer == "Sign up succesfull")
                 {
-                    MessageBox.Show("Adding succesfull");
+                    MessageBox.Show(answer);
                     this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(answer);
                 }
             }
             else if (btnSignUp.Text == "Update")
@@ -163,13 +149,20 @@ namespace StayFit.Forms
                 user.Surname = txtSurname.Text;
                 user.PhoneNumber = mtbPhoneNumber.Text;
                 user.CreateDate = DateTime.Now;
-                user.Mail = txtMail.Text;
+                user.Mail = email;
                 user.Password = txtPassword.Text;
-                if (userService.UpdateforAdmin(user))
+
+                string answer = userService.UpdateforAdmin(user);
+                if (answer == "Update succesfull")
                 {
-                    MessageBox.Show("Update succesfull");
+                    MessageBox.Show(answer);
                     this.Close();
                 }
+                else
+                {
+                    MessageBox.Show(answer);
+                }
+
             }
             else if (btnSignUp.Text == "Update Information")
             {
@@ -180,22 +173,33 @@ namespace StayFit.Forms
                 user.Surname = txtSurname.Text;
                 user.PhoneNumber = mtbPhoneNumber.Text;
                 user.CreateDate = DateTime.Now;
+                user.Password = txtPassword.Text;
 
-                if (user.Password == txtMail.Text)
+
+                string answer = userService.UpdateforUser(user);
+                if (answer == "Update succesfull")
                 {
-                    user.Password = txtPassword.Text;
-                    if (userService.UpdateforUser(user))
-                    {
-                        MessageBox.Show("Update succesfull");
-                        this.Close();
-                    }
+                    MessageBox.Show(answer);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(answer);
                 }
 
             }
         }
         private void SignUp_Load(object sender, EventArgs e)
         {
+            if (btnSignUp.Text != "Update Information")
+            {
+                txtMail.PasswordChar = '*';
 
+            }
+            else
+            {
+                txtMail.PasswordChar = '\0';
+            }
         }
 
         private void panelHeader_MouseDown(object sender, MouseEventArgs e)

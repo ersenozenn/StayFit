@@ -71,7 +71,7 @@ namespace StayFit.Forms
             List<string> words = new List<string>();
             Random rnd = new Random();
 
-            string path = Path.GetFullPath("Words.txt");
+            string path = Path.GetFullPath(@"..\..\..\Words.txt");
             StreamReader wordReader = new StreamReader(path);
 
             string line = "";

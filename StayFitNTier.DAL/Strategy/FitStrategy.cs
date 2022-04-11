@@ -1986,7 +1986,6 @@ namespace StayFitNTier.DAL.Strategy
                 product.Photo = bytes;
                 context.SaveChanges();
             }
-
         }
 
     }

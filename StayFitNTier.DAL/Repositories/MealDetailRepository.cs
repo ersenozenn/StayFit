@@ -89,8 +89,7 @@ namespace StayFitNTier.DAL.Repositories
 
             Dictionary<int, int> categories = new Dictionary<int, int>();
             foreach (var item in list)
-            {
-                
+            {                
                 categories.Add(item.ID, item.Count);
             }
             return categories;

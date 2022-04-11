@@ -77,7 +77,7 @@ namespace StayFit.Forms
         {
             try
             {
-                if (cmbRepast.SelectedIndex!=-1)
+                if (cmbRepast.SelectedIndex!=-1 && !string.IsNullOrWhiteSpace(txtMealName.Text))
                 {
                     User user = new User();
                     user = GetUser();
@@ -88,6 +88,10 @@ namespace StayFit.Forms
                     meal.Date = dtpDate.Value;
                     mealService.AddMeal(meal);
                     FillMealList();
+                }
+                else if (string.IsNullOrWhiteSpace(txtMealName.Text))
+                {
+                    MessageBox.Show("Please add a name to meal");
                 }
                 else
                 {
@@ -233,8 +237,7 @@ namespace StayFit.Forms
 
 
         private void lvMeals_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            btnAddMeal.Enabled = false;
+        {           
             txtMealName.Text = lvMeals.SelectedItems[0].Text;
             dtpDate.Value = Convert.ToDateTime(lvMeals.SelectedItems[0].SubItems[1].Text);
             Meal meal = new Meal();
@@ -249,7 +252,7 @@ namespace StayFit.Forms
             {
                 User user = GetUser();
                 Meal meal = new Meal();
-                if (lvMeals.SelectedItems.Count >= 0)
+                if (lvMeals.SelectedItems.Count >= 0 && !string.IsNullOrWhiteSpace(txtMealName.Text))
                 {
                     meal.Id = Convert.ToInt32(lvMeals.SelectedItems[0].Tag);
                     meal.Name = txtMealName.Text;
@@ -259,8 +262,8 @@ namespace StayFit.Forms
                     mealService.UpdateMeal(meal);
                     FillMealList();
                 }
-                else
-                    MessageBox.Show("Please pick a meal to update");
+                else if(string.IsNullOrWhiteSpace(txtMealName.Text))
+                    MessageBox.Show("Meal name can not be empty");
                 
             }
             catch (Exception ex)

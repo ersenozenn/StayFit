@@ -30,6 +30,7 @@ namespace StayFit.Forms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.nudProtein = new System.Windows.Forms.NumericUpDown();
@@ -45,16 +46,15 @@ namespace StayFit.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pbProduct = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudProtein)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortionWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCalories)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +71,17 @@ namespace StayFit.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1325, 614);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::StayFit.Properties.Resources.jennifer_schmidt_MRHyv_hHxgk_unsplash;
+            this.pictureBox1.Location = new System.Drawing.Point(947, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(378, 614);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -237,17 +248,6 @@ namespace StayFit.Forms
             this.label6.TabIndex = 34;
             this.label6.Text = "SubCategory :";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::StayFit.Properties.Resources.jennifer_schmidt_MRHyv_hHxgk_unsplash;
-            this.pictureBox1.Location = new System.Drawing.Point(947, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(378, 614);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -301,12 +301,12 @@ namespace StayFit.Forms
             this.Text = "AddProduct";
             this.Load += new System.EventHandler(this.AddProduct_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudProtein)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortionWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCalories)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
             this.ResumeLayout(false);
 

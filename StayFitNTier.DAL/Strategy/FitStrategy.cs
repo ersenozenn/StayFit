@@ -65,7 +65,8 @@ namespace StayFitNTier.DAL.Strategy
 
             SubCategory subCategory1 = new SubCategory
             {
-                CategoryId = 1,
+                //CategoryId = 1,
+                Category = category1,
                 Name = "Extras"
             };
             SubCategory subCategory2 = new SubCategory
@@ -1947,7 +1948,7 @@ namespace StayFitNTier.DAL.Strategy
             context.SaveChanges();
 
             
-            string path = Path.GetFullPath("CategoryPhotos");
+            string path = Path.GetFullPath(@"..\..\..\CategoryPhotos");
             DirectoryInfo d = new DirectoryInfo(path);
 
             FileInfo[] files = d.GetFiles("*.png");
@@ -1960,7 +1961,7 @@ namespace StayFitNTier.DAL.Strategy
                 category.Photo = bytes;
                 context.SaveChanges();
             }
-            string path1 = Path.GetFullPath("Subcategory Photos");
+            string path1 = Path.GetFullPath(@"..\..\..\Subcategory Photos");
             DirectoryInfo c = new DirectoryInfo(path1);
 
             FileInfo[] filesforSubCategory = c.GetFiles("*.png");
@@ -1973,7 +1974,7 @@ namespace StayFitNTier.DAL.Strategy
                 subCategory.Photo = bytes;
                 context.SaveChanges();
             }
-            string path2 = Path.GetFullPath("ProductPhotos");
+            string path2 = Path.GetFullPath(@"..\..\..\ProductPhotos");
             DirectoryInfo b = new DirectoryInfo(path2);
 
             FileInfo[] filesforProducts = b.GetFiles("*.png").OrderBy(a => a.CreationTime).ToArray();

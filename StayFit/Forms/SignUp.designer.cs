@@ -92,7 +92,7 @@ namespace StayFit.Forms
             // 
             this.mtbPhoneNumber.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbPhoneNumber.Location = new System.Drawing.Point(221, 142);
-            this.mtbPhoneNumber.Mask = "(999) 000-0000";
+            this.mtbPhoneNumber.Mask = "+90000-00000000";
             this.mtbPhoneNumber.Name = "mtbPhoneNumber";
             this.mtbPhoneNumber.Size = new System.Drawing.Size(227, 27);
             this.mtbPhoneNumber.TabIndex = 16;
@@ -104,9 +104,9 @@ namespace StayFit.Forms
             this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 23);
+            this.label1.Size = new System.Drawing.Size(95, 23);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Name :";
+            this.label1.Text = "(*)Name";
             // 
             // label2
             // 
@@ -115,9 +115,9 @@ namespace StayFit.Forms
             this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(88, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 23);
+            this.label2.Size = new System.Drawing.Size(130, 23);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Surname :";
+            this.label2.Text = "(*)Surname";
             // 
             // btnSignUp
             // 
@@ -176,9 +176,9 @@ namespace StayFit.Forms
             this.label4.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(29, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 23);
+            this.label4.Size = new System.Drawing.Size(193, 23);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Phone Number :";
+            this.label4.Text = "      Phone Number ";
             // 
             // txtPassword
             // 
@@ -197,9 +197,9 @@ namespace StayFit.Forms
             this.label3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(138, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 23);
+            this.label3.Size = new System.Drawing.Size(80, 23);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Mail :";
+            this.label3.Text = "(*)Mail";
             // 
             // label5
             // 
@@ -208,9 +208,9 @@ namespace StayFit.Forms
             this.label5.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(8, 320);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 23);
+            this.label5.Size = new System.Drawing.Size(215, 23);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Repeat Password :";
+            this.label5.Text = "(*)Repeat Password ";
             // 
             // label6
             // 
@@ -219,9 +219,9 @@ namespace StayFit.Forms
             this.label6.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(82, 262);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 23);
+            this.label6.Size = new System.Drawing.Size(141, 23);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Password :";
+            this.label6.Text = "(*)Password ";
             // 
             // txtMail
             // 

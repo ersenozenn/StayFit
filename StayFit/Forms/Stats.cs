@@ -47,6 +47,7 @@ namespace StayFit.Forms
                 if (meals.Count>0)
                 {
                     btnInfo.Text = "";
+                    dtpMinValue.Value = DateTime.Now.AddDays(-1);
                     FillEverything();
                     
                 }
@@ -156,7 +157,7 @@ namespace StayFit.Forms
         }
         public void FillTotalCalorieNeed()
         {
-            btnTotalCaloriesNeed.Text = (CalculateCaloryIntake()*(dtpMinValue.Value.Day-dtpMaxValue.Value.Day)).ToString("0.##");
+            btnTotalCaloriesNeed.Text = (CalculateCaloryIntake()* Convert.ToDecimal((dtpMaxValue.Value - dtpMinValue.Value).TotalDays)).ToString("0.##");
         }
         public void FillTotalProteinNeed()
         {
@@ -168,19 +169,19 @@ namespace StayFit.Forms
             {
                 if (userProperty.PhysicalActivityId == 1)
                 {
-                    btnTotalProteinNeed.Text = (userProperty.Weight * 0.8M* (dtpMinValue.Value.Day - dtpMaxValue.Value.Day)).ToString();
+                    btnTotalProteinNeed.Text = (userProperty.Weight * 0.8M* Convert.ToDecimal((dtpMaxValue.Value - dtpMinValue.Value).TotalDays)).ToString("0.##");
                 }
                 else if (userProperty.PhysicalActivityId == 2)
                 {
-                    btnTotalProteinNeed.Text = (userProperty.Weight * 1M * (dtpMinValue.Value.Day - dtpMaxValue.Value.Day)).ToString();
+                    btnTotalProteinNeed.Text = (userProperty.Weight * 1M * Convert.ToDecimal((dtpMaxValue.Value - dtpMinValue.Value).TotalDays)).ToString("0.##");
                 }
                 else if (userProperty.PhysicalActivityId == 3)
                 {
-                    btnTotalProteinNeed.Text = (userProperty.Weight * 1.2M * (dtpMinValue.Value.Day - dtpMaxValue.Value.Day)).ToString();
+                    btnTotalProteinNeed.Text = (userProperty.Weight * 1.2M * Convert.ToDecimal((dtpMaxValue.Value - dtpMinValue.Value).TotalDays)).ToString("0.##");
                 }
                 else if (userProperty.PhysicalActivityId == 4)
                 {
-                    btnTotalProteinNeed.Text = (userProperty.Weight * 1.5M * (dtpMinValue.Value.Day - dtpMaxValue.Value.Day)).ToString();
+                    btnTotalProteinNeed.Text = (userProperty.Weight * 1.5M * Convert.ToDecimal((dtpMaxValue.Value - dtpMinValue.Value).TotalDays)).ToString("0.##");
                 }
                 btnInfo.Text = "";
             }
@@ -206,15 +207,15 @@ namespace StayFit.Forms
 
         private void dtpMaxValue_ValueChanged(object sender, EventArgs e)
         {
-            ////try
-            ////{
+            try
+            {
                 dtpMaxValue.MinDate = dtpMinValue.Value;
                 FillEverything();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void FillEverything()
         {

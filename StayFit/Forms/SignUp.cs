@@ -71,7 +71,7 @@ namespace StayFit.Forms
             string mail = txtMail.Text;
             string password = txtPassword.Text;
             string rePassword = txtRePassword.Text;
-            if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && btnSignUp.Text == "Sign Up" || btnSignUp.Text == "Add" || btnSignUp.Text == "Update")
+            if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && !firstName.Any(char.IsDigit) && !surname.Any(char.IsDigit) && !firstName.Any(char.IsSymbol) && !surname.Any(char.IsSymbol) &&  btnSignUp.Text == "Sign Up" || btnSignUp.Text == "Add" || btnSignUp.Text == "Update")
             {
                 if (userService.GetUserbyMail(mail) != null)
                 {
@@ -85,7 +85,7 @@ namespace StayFit.Forms
                 }
 
             }
-            else if (password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && btnSignUp.Text == "Update Information")
+            else if (password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && btnSignUp.Text == "Update Information" && !firstName.Any(char.IsDigit) && !surname.Any(char.IsDigit))
             {
                 txtName.Text = txtName.Text[0].ToString().ToUpper() + txtName.Text.Substring(1);
                 txtSurname.Text = txtSurname.Text[0].ToString().ToUpper() + txtSurname.Text.Substring(1);
@@ -110,6 +110,10 @@ namespace StayFit.Forms
             else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword != password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && !mail.Contains("@") || !mail.EndsWith(".com"))
             {
                 MessageBox.Show("Passwords do not match!");
+            }
+            else if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && rePassword == password && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && firstName.Any(char.IsDigit) || surname.Any(char.IsDigit) || firstName.Any(char.IsSymbol) || surname.Any(char.IsSymbol))
+            {
+                MessageBox.Show("Firstname or lastname should not contain symbol or digit character");
             }
 
             else

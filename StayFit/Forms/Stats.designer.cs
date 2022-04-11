@@ -31,6 +31,7 @@ namespace StayFit.Forms
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnTotalProteinNeed = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@ namespace StayFit.Forms
             this.dtpMaxValue = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnInfo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -92,6 +92,18 @@ namespace StayFit.Forms
             this.panel5.Size = new System.Drawing.Size(777, 433);
             this.panel5.TabIndex = 6;
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInfo.Location = new System.Drawing.Point(0, 0);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(777, 41);
+            this.btnInfo.TabIndex = 3;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.btnTotalProteinNeed);
@@ -99,7 +111,7 @@ namespace StayFit.Forms
             this.panel9.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel9.Location = new System.Drawing.Point(424, 218);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 80);
+            this.panel9.Size = new System.Drawing.Size(213, 80);
             this.panel9.TabIndex = 2;
             // 
             // btnTotalProteinNeed
@@ -108,7 +120,7 @@ namespace StayFit.Forms
             this.btnTotalProteinNeed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTotalProteinNeed.Location = new System.Drawing.Point(0, 40);
             this.btnTotalProteinNeed.Name = "btnTotalProteinNeed";
-            this.btnTotalProteinNeed.Size = new System.Drawing.Size(200, 40);
+            this.btnTotalProteinNeed.Size = new System.Drawing.Size(213, 40);
             this.btnTotalProteinNeed.TabIndex = 1;
             this.btnTotalProteinNeed.UseVisualStyleBackColor = true;
             // 
@@ -118,9 +130,10 @@ namespace StayFit.Forms
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Location = new System.Drawing.Point(0, 0);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(200, 40);
+            this.button14.Size = new System.Drawing.Size(213, 40);
             this.button14.TabIndex = 0;
             this.button14.Text = "Total Protein Need";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button14.UseVisualStyleBackColor = true;
             // 
             // panel6
@@ -130,7 +143,7 @@ namespace StayFit.Forms
             this.panel6.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(424, 66);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 80);
+            this.panel6.Size = new System.Drawing.Size(213, 80);
             this.panel6.TabIndex = 2;
             // 
             // btnTotalCaloriesNeed
@@ -139,7 +152,7 @@ namespace StayFit.Forms
             this.btnTotalCaloriesNeed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTotalCaloriesNeed.Location = new System.Drawing.Point(0, 40);
             this.btnTotalCaloriesNeed.Name = "btnTotalCaloriesNeed";
-            this.btnTotalCaloriesNeed.Size = new System.Drawing.Size(200, 40);
+            this.btnTotalCaloriesNeed.Size = new System.Drawing.Size(213, 40);
             this.btnTotalCaloriesNeed.TabIndex = 1;
             this.btnTotalCaloriesNeed.UseVisualStyleBackColor = true;
             // 
@@ -149,7 +162,7 @@ namespace StayFit.Forms
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(200, 40);
+            this.button8.Size = new System.Drawing.Size(213, 40);
             this.button8.TabIndex = 0;
             this.button8.Text = "Total Calorie Need";
             this.button8.UseVisualStyleBackColor = true;
@@ -161,7 +174,7 @@ namespace StayFit.Forms
             this.panel11.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel11.Location = new System.Drawing.Point(287, 323);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(212, 80);
+            this.panel11.Size = new System.Drawing.Size(248, 80);
             this.panel11.TabIndex = 1;
             // 
             // btnAverageHIndex
@@ -170,7 +183,7 @@ namespace StayFit.Forms
             this.btnAverageHIndex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAverageHIndex.Location = new System.Drawing.Point(0, 40);
             this.btnAverageHIndex.Name = "btnAverageHIndex";
-            this.btnAverageHIndex.Size = new System.Drawing.Size(212, 40);
+            this.btnAverageHIndex.Size = new System.Drawing.Size(248, 40);
             this.btnAverageHIndex.TabIndex = 1;
             this.btnAverageHIndex.UseVisualStyleBackColor = true;
             // 
@@ -180,7 +193,7 @@ namespace StayFit.Forms
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Location = new System.Drawing.Point(0, 0);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(212, 40);
+            this.button17.Size = new System.Drawing.Size(248, 40);
             this.button17.TabIndex = 0;
             this.button17.Text = "Average Health Index";
             this.button17.UseVisualStyleBackColor = true;
@@ -318,18 +331,6 @@ namespace StayFit.Forms
             this.button1.TabIndex = 0;
             this.button1.Text = "GET YOUR STATS";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnInfo.Location = new System.Drawing.Point(0, 0);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(777, 41);
-            this.btnInfo.TabIndex = 3;
-            this.btnInfo.UseVisualStyleBackColor = true;
             // 
             // Stats
             // 

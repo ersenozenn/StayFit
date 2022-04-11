@@ -100,6 +100,17 @@ namespace StayFitNTier.BLL.Services
             return userRepository.DeleteforAdmin(user);
         }
         /// <summary>
+        /// Deletes user by given userId.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public bool DeleteforUser(int userId)
+        {
+            CheckId(userId);
+            User user = GetById(userId);
+            return userRepository.DeleteforUser(user);
+        }
+        /// <summary>
         /// Gets all active users.
         /// </summary>
         /// <returns></returns>

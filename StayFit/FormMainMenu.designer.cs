@@ -29,6 +29,7 @@ namespace StayFit
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -52,6 +53,8 @@ namespace StayFit
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pbDeleteUser = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
@@ -62,6 +65,8 @@ namespace StayFit
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteUser)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -77,6 +82,7 @@ namespace StayFit
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panelHeader.Controls.Add(this.panel10);
+            this.panelHeader.Controls.Add(this.panel7);
             this.panelHeader.Controls.Add(this.panel5);
             this.panelHeader.Controls.Add(this.panel9);
             this.panelHeader.Controls.Add(this.panel6);
@@ -379,6 +385,26 @@ namespace StayFit
             this.panel2.Size = new System.Drawing.Size(50, 762);
             this.panel2.TabIndex = 15;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.pbDeleteUser);
+            this.panel7.Location = new System.Drawing.Point(1532, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(43, 44);
+            this.panel7.TabIndex = 6;
+            // 
+            // pbDeleteUser
+            // 
+            this.pbDeleteUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbDeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("pbDeleteUser.Image")));
+            this.pbDeleteUser.Location = new System.Drawing.Point(0, 0);
+            this.pbDeleteUser.Name = "pbDeleteUser";
+            this.pbDeleteUser.Size = new System.Drawing.Size(43, 44);
+            this.pbDeleteUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDeleteUser.TabIndex = 0;
+            this.pbDeleteUser.TabStop = false;
+            this.pbDeleteUser.Click += new System.EventHandler(this.pbDeleteUser_Click);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -410,6 +436,8 @@ namespace StayFit
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,6 +466,8 @@ namespace StayFit
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pbChangeUserInfo;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pbDeleteUser;
     }
 }
 

@@ -58,6 +58,11 @@ namespace StayFit.Forms
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+
+
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePhoto)).BeginInit();
@@ -202,6 +207,8 @@ namespace StayFit.Forms
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.dtpBirthDate);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.btnAddInfo);
@@ -405,7 +412,31 @@ namespace StayFit.Forms
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(123, 23);
             this.label14.TabIndex = 9;
+
+            this.label14.Text = "Weight :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(591, 270);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 23);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "kg";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(591, 200);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 23);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "cm";
+
             this.label14.Text = "(*)Weight :";
+
             // 
             // MyProfile
             // 
@@ -463,5 +494,7 @@ namespace StayFit.Forms
         private System.Windows.Forms.Button btnChosePhoto;
         private System.Windows.Forms.PictureBox pbProfilePhoto;
         private System.Windows.Forms.DateTimePicker dtpBirthDate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

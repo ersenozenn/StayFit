@@ -43,6 +43,7 @@ namespace StayFit.Forms
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.cmbProduct = new System.Windows.Forms.ComboBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@ namespace StayFit.Forms
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -102,18 +104,18 @@ namespace StayFit.Forms
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.btnDeleteProduct);
             this.panel4.Controls.Add(this.groupBox3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(702, 0);
+            this.panel4.Location = new System.Drawing.Point(731, 0);
+            this.panel4.MaximumSize = new System.Drawing.Size(1409, 809);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(691, 770);
+            this.panel4.Size = new System.Drawing.Size(662, 770);
             this.panel4.TabIndex = 33;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::StayFit.Properties.Resources.MealResim1;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 421);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 421);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(644, 337);
+            this.pictureBox1.Size = new System.Drawing.Size(647, 346);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
@@ -122,9 +124,9 @@ namespace StayFit.Forms
             // 
             this.btnDeleteProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteProduct.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteProduct.Location = new System.Drawing.Point(15, 365);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(6, 365);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
-            this.btnDeleteProduct.Size = new System.Drawing.Size(652, 49);
+            this.btnDeleteProduct.Size = new System.Drawing.Size(647, 49);
             this.btnDeleteProduct.TabIndex = 35;
             this.btnDeleteProduct.Text = "DELETE PRODUCT FROM MEAL";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
@@ -134,15 +136,16 @@ namespace StayFit.Forms
             // 
             this.groupBox3.Controls.Add(this.lvMealDetails);
             this.groupBox3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(15, 12);
+            this.groupBox3.Location = new System.Drawing.Point(6, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(666, 347);
+            this.groupBox3.Size = new System.Drawing.Size(653, 347);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Meal Details";
             // 
             // lvMealDetails
             // 
+            this.lvMealDetails.AutoArrange = false;
             this.lvMealDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4,
             this.columnHeader5,
@@ -153,9 +156,9 @@ namespace StayFit.Forms
             this.lvMealDetails.FullRowSelect = true;
             this.lvMealDetails.GridLines = true;
             this.lvMealDetails.HideSelection = false;
-            this.lvMealDetails.Location = new System.Drawing.Point(7, 23);
+            this.lvMealDetails.Location = new System.Drawing.Point(6, 23);
             this.lvMealDetails.Name = "lvMealDetails";
-            this.lvMealDetails.Size = new System.Drawing.Size(637, 309);
+            this.lvMealDetails.Size = new System.Drawing.Size(641, 309);
             this.lvMealDetails.TabIndex = 0;
             this.lvMealDetails.UseCompatibleStateImageBehavior = false;
             this.lvMealDetails.View = System.Windows.Forms.View.Details;
@@ -163,46 +166,48 @@ namespace StayFit.Forms
             // columnHeader4
             // 
             this.columnHeader4.Text = "Product Name";
-            this.columnHeader4.Width = 130;
+            this.columnHeader4.Width = 184;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Portion";
-            this.columnHeader5.Width = 80;
+            this.columnHeader5.Width = 75;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Portion Weight";
-            this.columnHeader6.Width = 140;
+            this.columnHeader6.Width = 134;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Calories";
-            this.columnHeader7.Width = 80;
+            this.columnHeader7.Width = 77;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Protein";
-            this.columnHeader8.Width = 80;
+            this.columnHeader8.Width = 73;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Health Index";
-            this.columnHeader9.Width = 123;
+            this.columnHeader9.Width = 116;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(702, 770);
+            this.panel2.Size = new System.Drawing.Size(725, 770);
             this.panel2.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.cmbProduct);
             this.groupBox2.Controls.Add(this.btnAddProduct);
             this.groupBox2.Controls.Add(this.label7);
@@ -214,13 +219,22 @@ namespace StayFit.Forms
             this.groupBox2.Controls.Add(this.cmbSubcategory);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.cmbCategory);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 389);
+            this.groupBox2.Location = new System.Drawing.Point(6, 389);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(702, 381);
+            this.groupBox2.Size = new System.Drawing.Size(716, 381);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(588, 185);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(22, 23);
+            this.label12.TabIndex = 47;
+            this.label12.Text = "g";
             // 
             // cmbProduct
             // 
@@ -305,7 +319,7 @@ namespace StayFit.Forms
             this.nudPortion.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPortion.Location = new System.Drawing.Point(250, 233);
             this.nudPortion.Name = "nudPortion";
-            this.nudPortion.Size = new System.Drawing.Size(318, 24);
+            this.nudPortion.Size = new System.Drawing.Size(332, 24);
             this.nudPortion.TabIndex = 16;
             this.nudPortion.Value = new decimal(new int[] {
             1,
@@ -326,7 +340,7 @@ namespace StayFit.Forms
             0,
             0});
             this.nudPortionWeight.Name = "nudPortionWeight";
-            this.nudPortionWeight.Size = new System.Drawing.Size(318, 24);
+            this.nudPortionWeight.Size = new System.Drawing.Size(332, 24);
             this.nudPortionWeight.TabIndex = 16;
             this.nudPortionWeight.Value = new decimal(new int[] {
             100,
@@ -344,7 +358,7 @@ namespace StayFit.Forms
             this.cmbSubcategory.FormattingEnabled = true;
             this.cmbSubcategory.Location = new System.Drawing.Point(250, 83);
             this.cmbSubcategory.Name = "cmbSubcategory";
-            this.cmbSubcategory.Size = new System.Drawing.Size(318, 27);
+            this.cmbSubcategory.Size = new System.Drawing.Size(332, 27);
             this.cmbSubcategory.TabIndex = 14;
             this.cmbSubcategory.SelectionChangeCommitted += new System.EventHandler(this.cmbSubcategory_SelectionChangeCommitted);
             // 
@@ -371,17 +385,18 @@ namespace StayFit.Forms
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Location = new System.Drawing.Point(250, 32);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(318, 27);
+            this.cmbCategory.Size = new System.Drawing.Size(332, 27);
             this.cmbCategory.TabIndex = 10;
             this.cmbCategory.SelectionChangeCommitted += new System.EventHandler(this.cmbCategory_SelectionChangeCommitted);
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(702, 389);
+            this.panel3.Size = new System.Drawing.Size(725, 389);
             this.panel3.TabIndex = 0;
             // 
             // groupBox1
@@ -402,11 +417,10 @@ namespace StayFit.Forms
             this.groupBox1.Controls.Add(this.cmbRepast);
             this.groupBox1.Controls.Add(this.btnAddMeal);
             this.groupBox1.Controls.Add(this.lvMeals);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(6, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(702, 389);
+            this.groupBox1.Size = new System.Drawing.Size(716, 389);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Meal";
@@ -452,9 +466,9 @@ namespace StayFit.Forms
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Image = global::StayFit.Properties.Resources.dust;
-            this.btnClear.Location = new System.Drawing.Point(373, 338);
+            this.btnClear.Location = new System.Drawing.Point(292, 329);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(318, 45);
+            this.btnClear.Size = new System.Drawing.Size(418, 54);
             this.btnClear.TabIndex = 9;
             this.btnClear.Text = "CLEAR";
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -466,9 +480,9 @@ namespace StayFit.Forms
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(121, 302);
+            this.btnDelete.Location = new System.Drawing.Point(121, 293);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(246, 30);
+            this.btnDelete.Size = new System.Drawing.Size(165, 30);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "DELETE MEAL";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -478,9 +492,9 @@ namespace StayFit.Forms
             // 
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(121, 251);
+            this.btnUpdate.Location = new System.Drawing.Point(121, 243);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(246, 30);
+            this.btnUpdate.Size = new System.Drawing.Size(165, 30);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "UPDATE MEAL";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -521,7 +535,7 @@ namespace StayFit.Forms
             this.txtMealName.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMealName.Location = new System.Drawing.Point(121, 87);
             this.txtMealName.Name = "txtMealName";
-            this.txtMealName.Size = new System.Drawing.Size(246, 24);
+            this.txtMealName.Size = new System.Drawing.Size(165, 24);
             this.txtMealName.TabIndex = 0;
             // 
             // dtpDate
@@ -531,7 +545,7 @@ namespace StayFit.Forms
             this.dtpDate.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Location = new System.Drawing.Point(121, 117);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(246, 24);
+            this.dtpDate.Size = new System.Drawing.Size(165, 24);
             this.dtpDate.TabIndex = 2;
             // 
             // cmbRepast
@@ -545,16 +559,16 @@ namespace StayFit.Forms
             "Dinner"});
             this.cmbRepast.Location = new System.Drawing.Point(121, 147);
             this.cmbRepast.Name = "cmbRepast";
-            this.cmbRepast.Size = new System.Drawing.Size(246, 27);
+            this.cmbRepast.Size = new System.Drawing.Size(165, 27);
             this.cmbRepast.TabIndex = 3;
             // 
             // btnAddMeal
             // 
             this.btnAddMeal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMeal.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMeal.Location = new System.Drawing.Point(121, 200);
+            this.btnAddMeal.Location = new System.Drawing.Point(121, 193);
             this.btnAddMeal.Name = "btnAddMeal";
-            this.btnAddMeal.Size = new System.Drawing.Size(246, 30);
+            this.btnAddMeal.Size = new System.Drawing.Size(165, 30);
             this.btnAddMeal.TabIndex = 4;
             this.btnAddMeal.Text = "ADD MEAL";
             this.btnAddMeal.UseVisualStyleBackColor = true;
@@ -570,10 +584,10 @@ namespace StayFit.Forms
             this.lvMeals.FullRowSelect = true;
             this.lvMeals.GridLines = true;
             this.lvMeals.HideSelection = false;
-            this.lvMeals.Location = new System.Drawing.Point(373, 87);
+            this.lvMeals.Location = new System.Drawing.Point(292, 87);
             this.lvMeals.MultiSelect = false;
             this.lvMeals.Name = "lvMeals";
-            this.lvMeals.Size = new System.Drawing.Size(318, 245);
+            this.lvMeals.Size = new System.Drawing.Size(418, 236);
             this.lvMeals.TabIndex = 7;
             this.lvMeals.UseCompatibleStateImageBehavior = false;
             this.lvMeals.View = System.Windows.Forms.View.Details;
@@ -583,18 +597,18 @@ namespace StayFit.Forms
             // columnHeader1
             // 
             this.columnHeader1.Text = "Meal Name";
-            this.columnHeader1.Width = 98;
+            this.columnHeader1.Width = 143;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Date";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 100;
+            this.columnHeader2.Width = 122;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Repast Name";
-            this.columnHeader3.Width = 120;
+            this.columnHeader3.Width = 116;
             // 
             // MyMeals
             // 
@@ -671,5 +685,6 @@ namespace StayFit.Forms
         private System.Windows.Forms.DateTimePicker dtpMax;
         private System.Windows.Forms.DateTimePicker dtpMin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label12;
     }
 }

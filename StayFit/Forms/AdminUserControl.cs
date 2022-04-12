@@ -62,40 +62,7 @@ namespace StayFit.Forms
             
         }
 
-        private void btnAddUser_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-            using (SignUp signUp = new SignUp())
-            {
-                signUp.Text = "Add User";
-                signUp.btnSignUp.Text = "Add";
-
-                if (signUp.ShowDialog() != System.Windows.Forms.DialogResult.OK)
-                {
-                    this.Show();
-                    GetListBox();
-                }
-            }
-        }
-
-        private void btnUpdateUser_Click(object sender, EventArgs e)
-        {
-            int id = (int)(lstUsers.SelectedValue);
-            this.Hide();
-            using (SignUp signUp = new SignUp(id))
-            {
-                signUp.Text = "Update User";
-                signUp.btnSignUp.Text = "Update";
-                User user = new User();
-                if (signUp.ShowDialog() != System.Windows.Forms.DialogResult.OK)
-                {
-                    this.Show();
-                    GetListBox();
-                }
-            }
-        }
-
+       
         private void lstUsers_MouseClick(object sender, MouseEventArgs e)
         {
             try

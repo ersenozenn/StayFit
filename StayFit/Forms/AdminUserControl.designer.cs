@@ -38,19 +38,17 @@ namespace StayFit.Forms
             this.btnShowUserHistory = new System.Windows.Forms.Button();
             this.btnShowActiveUsers = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdateUser = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.dataUserInfo = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pbPrint = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -123,8 +121,6 @@ namespace StayFit.Forms
             this.panel5.Controls.Add(this.btnShowUserHistory);
             this.panel5.Controls.Add(this.btnShowActiveUsers);
             this.panel5.Controls.Add(this.btnDelete);
-            this.panel5.Controls.Add(this.btnUpdateUser);
-            this.panel5.Controls.Add(this.btnAddUser);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(696, 55);
             this.panel5.Name = "panel5";
@@ -135,9 +131,9 @@ namespace StayFit.Forms
             // 
             this.btnShowUserHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnShowUserHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowUserHistory.Location = new System.Drawing.Point(0, 484);
+            this.btnShowUserHistory.Location = new System.Drawing.Point(0, 405);
             this.btnShowUserHistory.Name = "btnShowUserHistory";
-            this.btnShowUserHistory.Size = new System.Drawing.Size(306, 122);
+            this.btnShowUserHistory.Size = new System.Drawing.Size(306, 201);
             this.btnShowUserHistory.TabIndex = 4;
             this.btnShowUserHistory.Text = "SHOW USER HISTORY";
             this.btnShowUserHistory.UseVisualStyleBackColor = true;
@@ -147,9 +143,9 @@ namespace StayFit.Forms
             // 
             this.btnShowActiveUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnShowActiveUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowActiveUsers.Location = new System.Drawing.Point(0, 363);
+            this.btnShowActiveUsers.Location = new System.Drawing.Point(0, 203);
             this.btnShowActiveUsers.Name = "btnShowActiveUsers";
-            this.btnShowActiveUsers.Size = new System.Drawing.Size(306, 121);
+            this.btnShowActiveUsers.Size = new System.Drawing.Size(306, 202);
             this.btnShowActiveUsers.TabIndex = 3;
             this.btnShowActiveUsers.Text = "SHOW ACTIVE USERS";
             this.btnShowActiveUsers.UseVisualStyleBackColor = true;
@@ -159,37 +155,13 @@ namespace StayFit.Forms
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(0, 242);
+            this.btnDelete.Location = new System.Drawing.Point(0, 0);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(306, 121);
+            this.btnDelete.Size = new System.Drawing.Size(306, 203);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "DELETE USER";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUpdateUser
-            // 
-            this.btnUpdateUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateUser.Location = new System.Drawing.Point(0, 121);
-            this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(306, 121);
-            this.btnUpdateUser.TabIndex = 1;
-            this.btnUpdateUser.Text = "UPDATE USER";
-            this.btnUpdateUser.UseVisualStyleBackColor = true;
-            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Location = new System.Drawing.Point(0, 0);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(306, 121);
-            this.btnAddUser.TabIndex = 0;
-            this.btnAddUser.Text = "ADD USER";
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // dataUserInfo
             // 
@@ -210,6 +182,30 @@ namespace StayFit.Forms
             this.dataUserInfo.ReadOnly = true;
             this.dataUserInfo.Size = new System.Drawing.Size(696, 606);
             this.dataUserInfo.TabIndex = 4;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "First Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Last Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Phone Number";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mail";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // panel4
             // 
@@ -262,30 +258,6 @@ namespace StayFit.Forms
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "First Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Last Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Phone Number";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Mail";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // AdminUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -325,8 +297,6 @@ namespace StayFit.Forms
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdateUser;
-        private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button btnShowUserHistory;
         private System.Windows.Forms.Button btnShowActiveUsers;
         private System.Windows.Forms.Panel panel6;

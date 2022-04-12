@@ -49,6 +49,9 @@ namespace StayFit.Forms
             this.button1 = new System.Windows.Forms.Button();
             this.pbProduct = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,6 +88,9 @@ namespace StayFit.Forms
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtProductName);
             this.panel2.Controls.Add(this.nudProtein);
             this.panel2.Controls.Add(this.nudPortionWeight);
@@ -101,7 +107,7 @@ namespace StayFit.Forms
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(11, 11);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(588, 588);
+            this.panel2.Size = new System.Drawing.Size(629, 588);
             this.panel2.TabIndex = 33;
             // 
             // txtProductName
@@ -293,6 +299,36 @@ namespace StayFit.Forms
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(549, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 23);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "g";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(549, 360);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 23);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "kcal";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(549, 444);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 23);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "g";
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,5 +376,8 @@ namespace StayFit.Forms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

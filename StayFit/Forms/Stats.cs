@@ -37,6 +37,22 @@ namespace StayFit.Forms
         {
             return userService.GetUserbyMail(mail);
         }
+
+        public void CalorieComparissons()
+        {
+            if (Convert.ToDecimal(btnTotalCalories.Text) < Convert.ToDecimal(btnTotalCaloriesNeed.Text))
+            {
+                btnInfo.Text = "You need to get more calories at your meals!";
+            }
+            else
+            {
+                
+                btnInfo.Text = "Your total calories of your meals more than your need!";
+                
+            }
+
+            
+        }
         private void Stats_Load(object sender, EventArgs e)
         {
             try
@@ -46,16 +62,18 @@ namespace StayFit.Forms
                 meals = mealService.GetMealbyUserId(user.Id,DateTime.Now.AddYears(-100),DateTime.Now);
                 if (meals.Count>0)
                 {
-                    btnInfo.Text = "";
+                    btnInfo.Text = " ";
+
                     dtpMinValue.Value = DateTime.Now.AddDays(-1);
                     FillEverything();
-                    
+                    CalorieComparissons();
+
                 }
                 else
                 {
                     btnInfo.Text= "You have not added any dishes yet.";
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -64,59 +82,86 @@ namespace StayFit.Forms
         }
         public void FillTotalCalories()
         {
-            User user = GetUser();
-            List<Meal> meals = new List<Meal>();
-            if (mealService.GetMealbyUserId(user.Id) != null)
+            try
             {
-                meals = mealService.GetMealbyUserId(user.Id);
-                foreach (var item in meals)
+                User user = GetUser();
+                List<Meal> meals = new List<Meal>();
+                if (mealService.GetMealbyUserId(user.Id) != null)
                 {
-                    if (mealDetailService.GetProductsforOneMeal(item.Id) != null)
+                    meals = mealService.GetMealbyUserId(user.Id);
+                    foreach (var item in meals)
                     {
-                        btnTotalCalories.Text = mealDetailService.GetCaloriesbyTime(user.Id, dtpMinValue.Value, dtpMaxValue.Value).ToString("0.##");
-                        break;
+                        if (mealDetailService.GetProductsforOneMeal(item.Id) != null)
+                        {
+                            btnTotalCalories.Text = mealDetailService.GetCaloriesbyTime(user.Id, dtpMinValue.Value, dtpMaxValue.Value).ToString("0.##");
+                            break;
+                        }
                     }
                 }
-            }            
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
 
         }
         public void FillTotalProtein()
         {
-            User user = GetUser();
-            List<Meal> meals = new List<Meal>();
-            if (mealService.GetMealbyUserId(user.Id) != null)
+            try
             {
-                meals = mealService.GetMealbyUserId(user.Id);
-                foreach (var item in meals)
+                User user = GetUser();
+                List<Meal> meals = new List<Meal>();
+                if (mealService.GetMealbyUserId(user.Id) != null)
                 {
-                    if (mealDetailService.GetProductsforOneMeal(item.Id) != null)
+                    meals = mealService.GetMealbyUserId(user.Id);
+                    foreach (var item in meals)
                     {
-                        btnTotalProtein.Text = mealDetailService.GetProteinbyTime(user.Id, dtpMinValue.Value, dtpMaxValue.Value).ToString();
-                        break;
+                        if (mealDetailService.GetProductsforOneMeal(item.Id) != null)
+                        {
+                            btnTotalProtein.Text = mealDetailService.GetProteinbyTime(user.Id, dtpMinValue.Value, dtpMaxValue.Value).ToString();
+                            break;
+                        }
                     }
                 }
-            }            
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
 
         }        
         public void FillAverageHealthIndex()
         {
-            User user = GetUser();
-            
-            List<Meal> meals = new List<Meal>();
-            if (mealService.GetMealbyUserId(user.Id)!=null)
+            try
             {
-                meals = mealService.GetMealbyUserId(user.Id);
-                foreach (var item in meals)
+                User user = GetUser();
+
+                List<Meal> meals = new List<Meal>();
+                if (mealService.GetMealbyUserId(user.Id) != null)
                 {
-                    if (mealDetailService.GetProductsforOneMeal(item.Id) != null)
+                    meals = mealService.GetMealbyUserId(user.Id);
+                    foreach (var item in meals)
                     {
-                        btnAverageHIndex.Text = mealDetailService.GetHealthIndexbyTime(user.Id, dtpMinValue.Value, dtpMaxValue.Value).ToString("0.##");
-                        break;
+                        if (mealDetailService.GetProductsforOneMeal(item.Id) != null)
+                        {
+                            btnAverageHIndex.Text = mealDetailService.GetHealthIndexbyTime(user.Id, dtpMinValue.Value, dtpMaxValue.Value).ToString("0.##");
+                            break;
+                        }
                     }
                 }
-            }         
-                       
-             
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+
         }
         public decimal GetCaloryIntake(decimal _activityFactor, UserProperty userProperty)
         {

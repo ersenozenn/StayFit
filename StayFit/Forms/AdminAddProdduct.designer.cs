@@ -60,12 +60,15 @@ namespace StayFit.Forms
             this.rdbPassive = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTotalCalorie = new System.Windows.Forms.Label();
             this.lblTotalProtein = new System.Windows.Forms.Label();
+            this.lblTotalCalorie = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudProtein)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortionWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCalories)).BeginInit();
@@ -382,6 +385,9 @@ namespace StayFit.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.rdbPassive);
             this.groupBox1.Controls.Add(this.label6);
@@ -405,7 +411,7 @@ namespace StayFit.Forms
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(35, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(580, 581);
+            this.groupBox1.Size = new System.Drawing.Size(617, 581);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             // 
@@ -422,36 +428,6 @@ namespace StayFit.Forms
             this.groupBox2.Size = new System.Drawing.Size(627, 581);
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 48);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "Total Calories ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(343, 385);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 27);
-            this.label7.TabIndex = 48;
-            // 
-            // label11
-            // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(314, 1);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(303, 48);
-            this.label11.TabIndex = 48;
-            this.label11.Text = "Total Protein";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -473,6 +449,16 @@ namespace StayFit.Forms
             this.tableLayoutPanel1.Size = new System.Drawing.Size(621, 100);
             this.tableLayoutPanel1.TabIndex = 49;
             // 
+            // lblTotalProtein
+            // 
+            this.lblTotalProtein.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTotalProtein.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProtein.Location = new System.Drawing.Point(314, 50);
+            this.lblTotalProtein.Name = "lblTotalProtein";
+            this.lblTotalProtein.Size = new System.Drawing.Size(303, 49);
+            this.lblTotalProtein.TabIndex = 50;
+            this.lblTotalProtein.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblTotalCalorie
             // 
             this.lblTotalCalorie.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -483,15 +469,65 @@ namespace StayFit.Forms
             this.lblTotalCalorie.TabIndex = 49;
             this.lblTotalCalorie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTotalProtein
+            // label2
             // 
-            this.lblTotalProtein.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTotalProtein.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalProtein.Location = new System.Drawing.Point(314, 50);
-            this.lblTotalProtein.Name = "lblTotalProtein";
-            this.lblTotalProtein.Size = new System.Drawing.Size(303, 49);
-            this.lblTotalProtein.TabIndex = 50;
-            this.lblTotalProtein.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(303, 48);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Total Calories ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(314, 1);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(303, 48);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "Total Protein";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(343, 385);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 27);
+            this.label7.TabIndex = 48;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(548, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 23);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "g";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(547, 174);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 23);
+            this.label13.TabIndex = 52;
+            this.label13.Text = "kcal";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(548, 139);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(22, 23);
+            this.label14.TabIndex = 53;
+            this.label14.Text = "g";
             // 
             // AdminAddProdduct
             // 
@@ -559,5 +595,8 @@ namespace StayFit.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

@@ -34,8 +34,6 @@ namespace StayFit
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pbChangeUserInfo = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pbInfo = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -53,20 +51,21 @@ namespace StayFit
             this.btnMainMenu = new System.Windows.Forms.Button();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pbDeleteUser = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pbSettings = new System.Windows.Forms.PictureBox();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.btnChangeInfo = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChangeUserInfo)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteUser)).BeginInit();
+            this.PanelContainer.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -82,8 +81,7 @@ namespace StayFit
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panelHeader.Controls.Add(this.panel10);
-            this.panelHeader.Controls.Add(this.panel7);
-            this.panelHeader.Controls.Add(this.panel5);
+            this.panelHeader.Controls.Add(this.panel8);
             this.panelHeader.Controls.Add(this.panel9);
             this.panelHeader.Controls.Add(this.panel6);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -114,26 +112,6 @@ namespace StayFit
             this.pbMinimize.TabIndex = 0;
             this.pbMinimize.TabStop = false;
             this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pbChangeUserInfo);
-            this.panel5.Location = new System.Drawing.Point(1581, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(43, 44);
-            this.panel5.TabIndex = 6;
-            // 
-            // pbChangeUserInfo
-            // 
-            this.pbChangeUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbChangeUserInfo.Image = global::StayFit.Properties.Resources.changes;
-            this.pbChangeUserInfo.Location = new System.Drawing.Point(0, 0);
-            this.pbChangeUserInfo.Name = "pbChangeUserInfo";
-            this.pbChangeUserInfo.Size = new System.Drawing.Size(43, 44);
-            this.pbChangeUserInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbChangeUserInfo.TabIndex = 0;
-            this.pbChangeUserInfo.TabStop = false;
-            this.pbChangeUserInfo.Click += new System.EventHandler(this.pbChangeUserInfo_Click);
             // 
             // panel9
             // 
@@ -368,6 +346,8 @@ namespace StayFit
             // 
             // PanelContainer
             // 
+            this.PanelContainer.Controls.Add(this.btnChangeInfo);
+            this.PanelContainer.Controls.Add(this.btnDeleteUser);
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelContainer.Location = new System.Drawing.Point(367, 50);
             this.PanelContainer.MaximumSize = new System.Drawing.Size(1409, 809);
@@ -385,25 +365,53 @@ namespace StayFit
             this.panel2.Size = new System.Drawing.Size(50, 762);
             this.panel2.TabIndex = 15;
             // 
-            // panel7
+            // panel8
             // 
-            this.panel7.Controls.Add(this.pbDeleteUser);
-            this.panel7.Location = new System.Drawing.Point(1532, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(43, 44);
-            this.panel7.TabIndex = 6;
+            this.panel8.Controls.Add(this.pbSettings);
+            this.panel8.Location = new System.Drawing.Point(1581, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(43, 44);
+            this.panel8.TabIndex = 6;
             // 
-            // pbDeleteUser
+            // pbSettings
             // 
-            this.pbDeleteUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbDeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("pbDeleteUser.Image")));
-            this.pbDeleteUser.Location = new System.Drawing.Point(0, 0);
-            this.pbDeleteUser.Name = "pbDeleteUser";
-            this.pbDeleteUser.Size = new System.Drawing.Size(43, 44);
-            this.pbDeleteUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeleteUser.TabIndex = 0;
-            this.pbDeleteUser.TabStop = false;
-            this.pbDeleteUser.Click += new System.EventHandler(this.pbDeleteUser_Click);
+            this.pbSettings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbSettings.Image = ((System.Drawing.Image)(resources.GetObject("pbSettings.Image")));
+            this.pbSettings.Location = new System.Drawing.Point(0, 0);
+            this.pbSettings.Name = "pbSettings";
+            this.pbSettings.Size = new System.Drawing.Size(43, 44);
+            this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSettings.TabIndex = 0;
+            this.pbSettings.TabStop = false;
+            this.pbSettings.Click += new System.EventHandler(this.pbSettings_Click);
+            // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteUser.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteUser.Image")));
+            this.btnDeleteUser.Location = new System.Drawing.Point(290, 286);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(364, 108);
+            this.btnDeleteUser.TabIndex = 0;
+            this.btnDeleteUser.Text = "DELETE MY ACCOUNT";
+            this.btnDeleteUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            // 
+            // btnChangeInfo
+            // 
+            this.btnChangeInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeInfo.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangeInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeInfo.Image")));
+            this.btnChangeInfo.Location = new System.Drawing.Point(778, 286);
+            this.btnChangeInfo.Name = "btnChangeInfo";
+            this.btnChangeInfo.Size = new System.Drawing.Size(364, 108);
+            this.btnChangeInfo.TabIndex = 0;
+            this.btnChangeInfo.Text = "CHANGE MY USER INFORMATION";
+            this.btnChangeInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChangeInfo.UseVisualStyleBackColor = true;
+            this.btnChangeInfo.Click += new System.EventHandler(this.btnChangeInfo_Click);
             // 
             // FormMainMenu
             // 
@@ -429,15 +437,14 @@ namespace StayFit
             this.panelHeader.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbChangeUserInfo)).EndInit();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeleteUser)).EndInit();
+            this.PanelContainer.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -464,10 +471,10 @@ namespace StayFit
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pbMinimize;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pbChangeUserInfo;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pbDeleteUser;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pbSettings;
+        private System.Windows.Forms.Button btnChangeInfo;
+        private System.Windows.Forms.Button btnDeleteUser;
     }
 }
 

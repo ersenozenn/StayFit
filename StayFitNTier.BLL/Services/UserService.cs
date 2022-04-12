@@ -46,7 +46,7 @@ namespace StayFitNTier.BLL.Services
             string mail = user.Mail;
             string password = user.Password;
             
-            if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) &&  !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && !firstName.Any(char.IsDigit) && !surname.Any(char.IsDigit) && !firstName.Any(char.IsSymbol) && !surname.Any(char.IsSymbol))
+            if (mail.Length > 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) &&  !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && !firstName.Any(char.IsDigit) && !surname.Any(char.IsDigit) && !firstName.Any(char.IsSymbol) && !surname.Any(char.IsSymbol))
             {
                 if (GetUserbyMail(mail) != null)
                 {
@@ -64,23 +64,23 @@ namespace StayFitNTier.BLL.Services
 
             }
             
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && !mail.Contains("@") || !mail.EndsWith(".com"))
+            else if (mail.Length <= 10  || !mail.Contains("@") || !mail.EndsWith(".com"))
             {
                 return "Please enter a valid email address!";
             }
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper)  && string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
+            else if ( string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(surname) )
             {
                 return "Please do not leave the name and surname fields blank!";
             }
-            else if (mail.Length < 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) &&  !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
+            else if (mail.Length < 10 )
             {
                 return "Email address must be longer than 10 characters!";
             }
-            else if (mail.Length > 10 && !password.Any(Char.IsDigit) || !password.Any(Char.IsLower) || !password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) || password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && firstName.Any(char.IsSymbol) && surname.Any(char.IsSymbol))
+            else if (!password.Any(Char.IsDigit) || !password.Any(Char.IsLower) || !password.Any(char.IsUpper)  || password.Length < 7 )
             {
                 return "Your password must contain uppercase and lowercase letters and numbers and length should be more than 6 characters!";
             }            
-            else if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) &&  !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && firstName.Any(char.IsDigit) || surname.Any(char.IsDigit) || firstName.Any(char.IsSymbol) || surname.Any(char.IsSymbol))
+            else if ( firstName.Any(char.IsDigit) || surname.Any(char.IsDigit) || firstName.Any(char.IsSymbol) || surname.Any(char.IsSymbol))
             {
                 return "Firstname or lastname should not contain symbol or digit character";
             }
@@ -131,7 +131,7 @@ namespace StayFitNTier.BLL.Services
             string mail = user.Mail;
             string password = user.Password;
 
-            if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && !firstName.Any(char.IsDigit) && !surname.Any(char.IsDigit) && !firstName.Any(char.IsSymbol) && !surname.Any(char.IsSymbol))
+            if (mail.Length > 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && !firstName.Any(char.IsDigit) && !surname.Any(char.IsDigit) && !firstName.Any(char.IsSymbol) && !surname.Any(char.IsSymbol))
             {
                 if (GetUserbyMail(mail) != null)
                 {
@@ -149,24 +149,23 @@ namespace StayFitNTier.BLL.Services
 
             }
 
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && !mail.Contains("@") || !mail.EndsWith(".com"))
+            else if (mail.Length <= 10 || !mail.Contains("@") || !mail.EndsWith(".com"))
             {
                 return "Please enter a valid email address!";
             }
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
+            else if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(surname))
             {
                 return "Please do not leave the name and surname fields blank!";
             }
-            else if (mail.Length < 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
+            else if (mail.Length < 10)
             {
                 return "Email address must be longer than 10 characters!";
             }
-            else if (mail.Length > 10 && !password.Any(Char.IsDigit) || !password.Any(Char.IsLower) || !password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) || password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && firstName.Any(char.IsSymbol) && surname.Any(char.IsSymbol))
+            else if (!password.Any(Char.IsDigit) || !password.Any(Char.IsLower) || !password.Any(char.IsUpper) || password.Length < 7)
             {
                 return "Your password must contain uppercase and lowercase letters and numbers and length should be more than 6 characters!";
             }
-           
-            else if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && firstName.Any(char.IsDigit) || surname.Any(char.IsDigit) || firstName.Any(char.IsSymbol) || surname.Any(char.IsSymbol))
+            else if (firstName.Any(char.IsDigit) || surname.Any(char.IsDigit) || firstName.Any(char.IsSymbol) || surname.Any(char.IsSymbol))
             {
                 return "Firstname or lastname should not contain symbol or digit character";
             }
@@ -208,29 +207,29 @@ namespace StayFitNTier.BLL.Services
                     return "Update succesfull";
                 }
             }
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper)  && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && !mail.Contains("@") || !mail.EndsWith(".com"))
+            else if (mail.Length <= 10 || !mail.Contains("@") || !mail.EndsWith(".com"))
             {
                 return "Please enter a valid email address!";
             }
-            else if (mail.Length >= 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper)  && string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
+            else if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(surname))
             {
                 return "Please do not leave the name and surname fields blank!";
             }
-            else if (mail.Length < 10 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper)  && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com"))
+            else if (mail.Length < 10)
             {
                 return "Email address must be longer than 10 characters!";
             }
-            else if (mail.Length > 10 && !password.Any(Char.IsDigit) || !password.Any(Char.IsLower) || !password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) || password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && firstName.Any(char.IsSymbol) && surname.Any(char.IsSymbol))
+            else if (!password.Any(Char.IsDigit) || !password.Any(Char.IsLower) || !password.Any(char.IsUpper) || password.Length < 7)
             {
                 return "Your password must contain uppercase and lowercase letters and numbers and length should be more than 6 characters!";
-            }           
-            else if (mail.Length >= 6 && password.Any(Char.IsDigit) && password.Any(Char.IsLower) && password.Any(char.IsUpper) && !string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(surname) && password.Length >= 6 && mail.Contains("@") && mail.EndsWith(".com") && firstName.Any(char.IsDigit) || surname.Any(char.IsDigit) || firstName.Any(char.IsSymbol) || surname.Any(char.IsSymbol))
+            }
+            else if (firstName.Any(char.IsDigit) || surname.Any(char.IsDigit) || firstName.Any(char.IsSymbol) || surname.Any(char.IsSymbol))
             {
                 return "Firstname or lastname should not contain symbol or digit character";
             }
 
-           
-                return "Something went wrong. Please check your entries.";
+
+            return "Something went wrong. Please check your entries.";
             
         }
 

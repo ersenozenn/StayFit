@@ -104,7 +104,6 @@ namespace StayFit
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.MainMenu(mail), sender);
-            
         }
 
         private void btnShowStats_Click_1(object sender, EventArgs e)
@@ -151,7 +150,8 @@ namespace StayFit
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.MainMenu(mail));
+            OpenChildForm(new Forms.MainMenu(mail), sender);
+
 
         }
                
@@ -226,7 +226,12 @@ namespace StayFit
                 }
             }
         }
+        
+        public void OpenMyProfile(object sender, EventArgs e)
+        {           
 
+            btnMyProfile_Click_1(sender,e);
+        }
         private void pbDeleteUser_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = new DialogResult();

@@ -268,10 +268,8 @@ namespace StayFit.Forms
 
                     
                 }
-            }
-            
-
-            
+            }           
+                        
             FillPictureBoxes();
         }
 
@@ -295,5 +293,20 @@ namespace StayFit.Forms
 
             e.Graphics.DrawString(btnInformation.Text, new Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular), Brushes.Black, 20, 20);
         }
+     
+        public void btnInformation_Click(object sender, EventArgs e)
+        {            
+        }
+        //public bool ControlforProfile()
+        //{
+        //    if (counter>0)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
     }
 }

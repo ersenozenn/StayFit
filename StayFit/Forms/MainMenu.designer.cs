@@ -140,6 +140,7 @@ namespace StayFit.Forms
             this.btnInformation.TabIndex = 5;
             this.btnInformation.Text = "You need to input your physical properties to see the our unique results .";
             this.btnInformation.UseVisualStyleBackColor = true;
+            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
             // 
             // panel1
             // 

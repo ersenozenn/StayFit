@@ -129,12 +129,17 @@ namespace StayFit.Forms
                 
                 using (MemoryStream ms = new MemoryStream())
                 {
+                if (pbProduct.Image != null)
+                {
                     Image img = pbProduct.Image;
                     byte[] arr;
                     img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     arr = ms.ToArray();
                     return arr;
-                }              
+                }
+                else
+                    return null;
+            }              
             
         }
         private void button1_Click(object sender, EventArgs e)

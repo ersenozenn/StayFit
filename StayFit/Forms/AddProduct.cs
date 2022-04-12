@@ -39,7 +39,7 @@ namespace StayFit.Forms
             {
                 if (!string.IsNullOrEmpty(txtProductName.Text) && nudPortionWeight.Value != 0 && nudCalories.Value != 0 && cmbHealthIndex.SelectedIndex != -1 && cmbSubCategory.SelectedIndex != -1 && cmbCategory.SelectedIndex != -1)
                 {
-                    if (GetPhoto()==null)
+                    if (GetPhoto() == null)
                     {
                         Product product1 = new Product();
                         product1.Name = txtProductName.Text;
@@ -74,11 +74,11 @@ namespace StayFit.Forms
 
 
 
-                    
+
                 }
                 else
                     MessageBox.Show("Please do not leave the fields blank");
-                
+
             }
             catch (Exception ex)
             {
@@ -104,7 +104,7 @@ namespace StayFit.Forms
             }
         }
 
-        
+
         private void GetSubCategoriesByCategoryId()
         {
             List<SubCategory> subCategories = new List<SubCategory>();
@@ -129,12 +129,17 @@ namespace StayFit.Forms
                 
                 using (MemoryStream ms = new MemoryStream())
                 {
+                if (pbProduct.Image != null)
+                {
                     Image img = pbProduct.Image;
                     byte[] arr;
                     img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     arr = ms.ToArray();
                     return arr;
-                }              
+                }
+                else
+                    return null;
+            }              
             
         }
         private void button1_Click(object sender, EventArgs e)
@@ -160,7 +165,7 @@ namespace StayFit.Forms
 
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
     }
 }

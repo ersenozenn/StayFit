@@ -135,7 +135,7 @@ namespace StayFit.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (lstUsers.SelectedIndex != -1)
-                userService.DeleteforAdmin((int)(lstUsers.SelectedValue));
+                userService.DeleteforUser((int)(lstUsers.SelectedValue));
             GetListBox();
         }
     }

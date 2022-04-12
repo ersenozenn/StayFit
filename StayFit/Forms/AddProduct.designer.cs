@@ -144,6 +144,11 @@ namespace StayFit.Forms
             // 
             this.nudCalories.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCalories.Location = new System.Drawing.Point(208, 356);
+            this.nudCalories.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudCalories.Name = "nudCalories";
             this.nudCalories.Size = new System.Drawing.Size(335, 27);
             this.nudCalories.TabIndex = 38;
@@ -201,6 +206,7 @@ namespace StayFit.Forms
             // 
             // cmbHealthIndex
             // 
+            this.cmbHealthIndex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHealthIndex.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHealthIndex.FormattingEnabled = true;
             this.cmbHealthIndex.Items.AddRange(new object[] {

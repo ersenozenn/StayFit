@@ -41,6 +41,7 @@ namespace StayFit.Forms
             this.btnTotalCaloryIntake = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbBig = new System.Windows.Forms.RadioButton();
             this.rbAverage = new System.Windows.Forms.RadioButton();
@@ -57,7 +58,6 @@ namespace StayFit.Forms
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePhoto)).BeginInit();
@@ -222,6 +222,16 @@ namespace StayFit.Forms
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             // 
+            // dtpBirthDate
+            // 
+            this.dtpBirthDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dtpBirthDate.CalendarTrailingForeColor = System.Drawing.SystemColors.Window;
+            this.dtpBirthDate.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthDate.Location = new System.Drawing.Point(250, 60);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(333, 27);
+            this.dtpBirthDate.TabIndex = 21;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rbBig);
@@ -234,7 +244,7 @@ namespace StayFit.Forms
             this.groupBox3.Size = new System.Drawing.Size(539, 199);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Excercise Frequency";
+            this.groupBox3.Text = "(*)Excercise Frequency";
             // 
             // rbBig
             // 
@@ -300,9 +310,9 @@ namespace StayFit.Forms
             this.label17.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(121, 132);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(94, 23);
+            this.label17.Size = new System.Drawing.Size(124, 23);
             this.label17.TabIndex = 1;
-            this.label17.Text = "Gender :";
+            this.label17.Text = "(*)Gender :";
             // 
             // dtpMeasurementDate
             // 
@@ -323,9 +333,9 @@ namespace StayFit.Forms
             this.label16.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(126, 201);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 23);
+            this.label16.Size = new System.Drawing.Size(119, 23);
             this.label16.TabIndex = 1;
-            this.label16.Text = "Height :";
+            this.label16.Text = "(*)Height :";
             // 
             // rbFemale
             // 
@@ -367,9 +377,9 @@ namespace StayFit.Forms
             this.label15.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(90, 63);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(125, 23);
+            this.label15.Size = new System.Drawing.Size(155, 23);
             this.label15.TabIndex = 1;
-            this.label15.Text = "Birth Date :";
+            this.label15.Text = "(*)Birth Date :";
             // 
             // txtWeight
             // 
@@ -393,19 +403,9 @@ namespace StayFit.Forms
             this.label14.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(122, 270);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(93, 23);
+            this.label14.Size = new System.Drawing.Size(123, 23);
             this.label14.TabIndex = 9;
-            this.label14.Text = "Weight :";
-            // 
-            // dtpBirthDate
-            // 
-            this.dtpBirthDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.dtpBirthDate.CalendarTrailingForeColor = System.Drawing.SystemColors.Window;
-            this.dtpBirthDate.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBirthDate.Location = new System.Drawing.Point(250, 60);
-            this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(333, 27);
-            this.dtpBirthDate.TabIndex = 21;
+            this.label14.Text = "(*)Weight :";
             // 
             // MyProfile
             // 

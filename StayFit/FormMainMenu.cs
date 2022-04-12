@@ -107,10 +107,8 @@ namespace StayFit
         }
 
         private void btnShowStats_Click_1(object sender, EventArgs e)
-        {
-            
+        {            
             OpenChildForm(new Forms.Stats(mail), sender);
-
         }
 
         private void btnMyProfile_Click_1(object sender, EventArgs e)

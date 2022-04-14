@@ -42,16 +42,12 @@ namespace StayFit.Forms
         {
             if (Convert.ToDecimal(btnTotalCalories.Text) < Convert.ToDecimal(btnTotalCaloriesNeed.Text))
             {
-                btnInfo.Text = "You need to get more calories at your meals!";
+                btnInfo.Text = "You need to get more calories!";
             }
             else
-            {
-                
-                btnInfo.Text = "Your total calories of your meals more than your need!";
-                
-            }
-
-            
+            {                
+                btnInfo.Text = "Total calories of your meals more than your need!";                
+            }            
         }
         private void Stats_Load(object sender, EventArgs e)
         {

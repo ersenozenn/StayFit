@@ -81,10 +81,13 @@ namespace StayFit.Forms
                 words.Add(line);
             }
 
+
             btnMessages.Text = words[rnd.Next(1, words.Count)];
 
             GetUserInformation();
         }
+
+
 
         void GetUserInformation()
         {            

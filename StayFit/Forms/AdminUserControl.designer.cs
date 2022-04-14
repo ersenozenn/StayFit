@@ -46,8 +46,6 @@ namespace StayFit.Forms
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pbPrint = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -210,8 +208,6 @@ namespace StayFit.Forms
             // panel4
             // 
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.textBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
@@ -238,22 +234,6 @@ namespace StayFit.Forms
             this.pbPrint.TabStop = false;
             this.pbPrint.Click += new System.EventHandler(this.pbPrint_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(720, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Search :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(818, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 24);
-            this.textBox1.TabIndex = 0;
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -278,7 +258,6 @@ namespace StayFit.Forms
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataUserInfo)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPrint)).EndInit();
             this.ResumeLayout(false);
@@ -293,8 +272,6 @@ namespace StayFit.Forms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataUserInfo;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnShowUserHistory;

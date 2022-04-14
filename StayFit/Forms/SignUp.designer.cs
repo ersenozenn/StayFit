@@ -92,7 +92,7 @@ namespace StayFit.Forms
             // 
             this.mtbPhoneNumber.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbPhoneNumber.Location = new System.Drawing.Point(221, 142);
-            this.mtbPhoneNumber.Mask = "+90000-00000000";
+            this.mtbPhoneNumber.Mask = "(999) 000-0000";
             this.mtbPhoneNumber.Name = "mtbPhoneNumber";
             this.mtbPhoneNumber.Size = new System.Drawing.Size(227, 27);
             this.mtbPhoneNumber.TabIndex = 16;

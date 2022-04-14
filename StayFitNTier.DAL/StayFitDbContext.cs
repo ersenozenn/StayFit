@@ -12,7 +12,7 @@ namespace StayFitNTier.DAL
 {
     public class StayFitDbContext : DbContext
     {
-        public StayFitDbContext() : base("Data Source = DESKTOP-K7JLGEU\\SQLEXPRESS;Initial Catalog=StayFitDB;Integrated Security=true;")
+        public StayFitDbContext() : base("Data Source = DESKTOP-5LLUNOS\\SQLEXPRESS;Initial Catalog=StayFitDB;Integrated Security=true;")
         {
             Database.SetInitializer(new FitStrategy());
 

@@ -252,7 +252,7 @@ namespace StayFit.Forms
             {
                 User user = GetUser();
                 Meal meal = new Meal();
-                if (lvMeals.SelectedItems.Count >= 0 && !string.IsNullOrWhiteSpace(txtMealName.Text))
+                if (lvMeals.SelectedItems.Count > 0 && !string.IsNullOrWhiteSpace(txtMealName.Text))
                 {
                     meal.Id = Convert.ToInt32(lvMeals.SelectedItems[0].Tag);
                     meal.Name = txtMealName.Text;
@@ -261,10 +261,14 @@ namespace StayFit.Forms
                     meal.Date = dtpDate.Value;
                     mealService.UpdateMeal(meal);
                     FillMealList();
+                }                
+                else if(lvMeals.SelectedItems.Count<=0)
+                {
+                    MessageBox.Show("Please pick a meal to update");
                 }
-                else if(string.IsNullOrWhiteSpace(txtMealName.Text))
+                else if (string.IsNullOrWhiteSpace(txtMealName.Text)&& lvMeals.SelectedItems.Count > 0)
                     MessageBox.Show("Meal name can not be empty");
-                
+
             }
             catch (Exception ex)
             {

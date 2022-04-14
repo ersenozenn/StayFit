@@ -100,6 +100,7 @@ namespace StayFit.Forms
                     product.Photo = GetPhoto();
                     product.IsActive = active;
                     productService.AddProduct(product);
+                    MessageBox.Show("Product added successfully.");
                 }
                 else if (GetPhoto() == null)
                 {
@@ -112,6 +113,7 @@ namespace StayFit.Forms
                     product1.SubCategoryId = (int)(cmbSubCategory.SelectedValue);
                     product1.IsActive = active;
                     productService.AddProduct(product1);
+                    MessageBox.Show("Product added successfully without photo.");
                 }
                 
                 ClearEverything();

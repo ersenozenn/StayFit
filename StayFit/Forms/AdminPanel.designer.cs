@@ -30,8 +30,8 @@ namespace StayFit.Forms
         private void InitializeComponent()
         {
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pbInfo = new System.Windows.Forms.PictureBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,23 +45,18 @@ namespace StayFit.Forms
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnSubCategory = new System.Windows.Forms.Button();
             this.PanelContainer = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.panel6.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panelHeader.Controls.Add(this.panel10);
-            this.panelHeader.Controls.Add(this.panel9);
             this.panelHeader.Controls.Add(this.panel1);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
@@ -72,24 +67,25 @@ namespace StayFit.Forms
             this.panelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseMove);
             this.panelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseUp);
             // 
-            // panel9
+            // panel10
             // 
-            this.panel9.Controls.Add(this.pbInfo);
-            this.panel9.Location = new System.Drawing.Point(1581, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(43, 44);
-            this.panel9.TabIndex = 6;
+            this.panel10.Controls.Add(this.pbMinimize);
+            this.panel10.Location = new System.Drawing.Point(1630, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(43, 44);
+            this.panel10.TabIndex = 7;
             // 
-            // pbInfo
+            // pbMinimize
             // 
-            this.pbInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbInfo.Image = global::StayFit.Properties.Resources.information__1_1;
-            this.pbInfo.Location = new System.Drawing.Point(0, 0);
-            this.pbInfo.Name = "pbInfo";
-            this.pbInfo.Size = new System.Drawing.Size(43, 44);
-            this.pbInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbInfo.TabIndex = 0;
-            this.pbInfo.TabStop = false;
+            this.pbMinimize.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbMinimize.Image = global::StayFit.Properties.Resources.minimize;
+            this.pbMinimize.Location = new System.Drawing.Point(0, 0);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(43, 44);
+            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMinimize.TabIndex = 0;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
             // 
             // panel1
             // 
@@ -258,26 +254,6 @@ namespace StayFit.Forms
             this.PanelContainer.Size = new System.Drawing.Size(1332, 667);
             this.PanelContainer.TabIndex = 7;
             // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.pbMinimize);
-            this.panel10.Location = new System.Drawing.Point(1630, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(43, 44);
-            this.panel10.TabIndex = 7;
-            // 
-            // pbMinimize
-            // 
-            this.pbMinimize.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbMinimize.Image = global::StayFit.Properties.Resources.minimize;
-            this.pbMinimize.Location = new System.Drawing.Point(0, 0);
-            this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(43, 44);
-            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMinimize.TabIndex = 0;
-            this.pbMinimize.TabStop = false;
-            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
-            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -297,13 +273,11 @@ namespace StayFit.Forms
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
             this.panelHeader.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).EndInit();
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -322,8 +296,6 @@ namespace StayFit.Forms
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel PanelContainer;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pbInfo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.Panel panel10;
